@@ -14,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <h1 className="pagge__title">Mi Lista de Pokemons</h1>
+        <h1 className="page__title">Mi Lista de Pokemon</h1>
         <PokemonList
           pokemons={this.state.pokemons}
         />
