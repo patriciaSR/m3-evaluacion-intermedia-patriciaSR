@@ -7,7 +7,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pokemons: pokemons
+      pokemons: pokemons,
+      selected: false
     }
   }
 
@@ -17,6 +18,7 @@ class App extends React.Component {
         <h1 className="page__title">Mi Lista de Pokemon</h1>
         <PokemonList
           pokemons={this.state.pokemons}
+          selected={this.state.selected}
         />
       </div>
     );
