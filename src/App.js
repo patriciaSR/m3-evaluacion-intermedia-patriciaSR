@@ -9,9 +9,22 @@ class App extends React.Component {
     this.state = {
       pokemons: pokemons,
       selected: false
+    };
+    this.selectPokemon = this.selectPokemon.bind(this);
+
+  }
+  selectPokemon(event) {
+    const value = event.target.className;
+    if (value.includes('big')) {
+      this.setState({
+        selected: false
+      })
+    } else {
+      this.setState({
+        selected: true
+      })
     }
   }
-
   render() {
     return (
       <div className="app">
@@ -19,6 +32,7 @@ class App extends React.Component {
         <PokemonList
           pokemons={this.state.pokemons}
           selected={this.state.selected}
+          selectPokemon={this.selectPokemon}
         />
       </div>
     );

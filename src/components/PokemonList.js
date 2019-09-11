@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './PokemonList.scss';
 
 class PokemonList extends React.Component {
+  
   render() {
     return (
       <ul className="pokemon__list">
@@ -14,6 +15,7 @@ class PokemonList extends React.Component {
               image={pokemon.url}
               types={pokemon.types}
               selected={this.props.selected}
+              selectPokemon={this.props.selectPokemon}
             />
           </li>
 

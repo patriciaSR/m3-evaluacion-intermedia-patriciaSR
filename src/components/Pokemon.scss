@@ -2,6 +2,7 @@
   background-color: #eff7fe;
   border: 1px solid grey;
   border-radius: 5px;
+  width: 100%;
 
   .pokemon-card__name{
     text-transform: capitalize;
@@ -28,6 +29,6 @@
 }
 
 .big {
-  width: 200px;
+  transform: scale(1.7);
 }
 
