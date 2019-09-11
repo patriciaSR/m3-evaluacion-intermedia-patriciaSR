@@ -1,0 +1,12 @@
+.pokemon__list{
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 15px;
+  
+  .list__pokemon{
+    list-style: none;
+  }
+}

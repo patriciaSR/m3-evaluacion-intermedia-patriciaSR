@@ -1,0 +1,27 @@
+.pokemon-card{
+  background-color: #eff7fe;
+  border: 1px solid grey;
+  border-radius: 5px;
+
+  .pokemon-card__name{
+    margin: 0;
+    padding: 5px;
+    border-top: 1px solid grey;
+  }
+  .pokemon-card__types-list{
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    border-top: 2px solid rgb(211, 206, 206);
+    
+    .pokemon__type{
+      background-color: #7f7f7f;
+      color: white;
+      margin: 5px;
+      padding: 3px;
+      border-radius: 5px;
+    }
+  }
+}
+
