@@ -14,8 +14,6 @@ class PokemonList extends React.Component {
               name={pokemon.name}
               image={pokemon.url}
               types={pokemon.types}
-              selected={this.props.selected}
-              selectPokemon={this.props.selectPokemon}
             />
           </li>
 
