@@ -5,10 +5,11 @@ import './PokemonList.scss';
 
 class PokemonList extends React.Component {
   render() {
+
     return (
       <ul className="pokemon__list">
         {this.props.pokemons.map(pokemon =>
-          <li className="list__pokemon" key={pokemon.id}>
+          <li className={`list__pokemon ${this.props.favList.includes(pokemon) ? 'fav' : ''}`} id={pokemon.id} key={pokemon.id} onClick={() => this.props.favPokemon(pokemon)}>
             <Pokemon
               name={pokemon.name}
               image={pokemon.url}
@@ -23,7 +24,9 @@ class PokemonList extends React.Component {
 }
 
 PokemonList.propTypes = {
-  pokemons: PropTypes.arrayOf(PropTypes.object)
+  pokemons: PropTypes.arrayOf(PropTypes.object),
+  favPokemon: PropTypes.func,
+  favList: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default PokemonList;

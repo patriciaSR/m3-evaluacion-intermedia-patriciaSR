@@ -5,7 +5,7 @@ import './Pokemon.scss';
 class Pokemon extends React.Component {
   render() {
     return (
-      <div className="pokemon-card">
+      <div className="pokemon-card" >
         <img src={this.props.image} alt={this.props.name} className="pokemon__img" />
         <h2 className="pokemon-card__name">{this.props.name}</h2>
         <ul className="pokemon-card__types-list">
@@ -19,9 +19,9 @@ class Pokemon extends React.Component {
 }
 
 Pokemon.propTypes = {
-  image: PropTypes.string,
-  name: PropTypes.string,
-  types: PropTypes.arrayOf(PropTypes.string)
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  types: PropTypes.arrayOf(PropTypes.string),
 }
 
 
